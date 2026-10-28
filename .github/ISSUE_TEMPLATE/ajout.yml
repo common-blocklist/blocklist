@@ -1,0 +1,58 @@
+name: Demande d'ajout
+description: Proposer un compte qui a publié un contenu entrant dans les critères
+title: "Ajout : @"
+labels: ["ajout", "à vérifier"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Lisez d'abord les [critères](https://github.com/common-blocklist/blocklist/blob/main/CRITERES.md). Une demande sans lien direct **et** sans archive sera fermée.
+  - type: input
+    id: compte
+    attributes:
+      label: Identifiant du compte
+      placeholder: "exemple (sans @)"
+    validations:
+      required: true
+  - type: input
+    id: lien
+    attributes:
+      label: Lien direct vers la publication
+      placeholder: "https://x.com/exemple/status/1234567890"
+    validations:
+      required: true
+  - type: input
+    id: archive
+    attributes:
+      label: Lien d'archive (archive.today ou Wayback Machine)
+      placeholder: "https://archive.ph/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: Catégorie
+      options:
+        - "H1 : provocation à la haine, à la violence ou à la discrimination"
+        - "H2 : injure à caractère raciste ou religieux"
+        - "H3 : diffamation à caractère raciste ou religieux"
+        - "H4 : contestation ou apologie de crime contre l'humanité"
+        - "H5 : mêmes faits visant le sexe, l'orientation, l'identité de genre ou le handicap"
+    validations:
+      required: true
+  - type: textarea
+    id: explication
+    attributes:
+      label: Pourquoi ce contenu entre dans cette catégorie
+      description: Une ou deux phrases factuelles.
+    validations:
+      required: true
+  - type: checkboxes
+    id: verifs
+    attributes:
+      label: Vérifications
+      options:
+        - label: Le compte n'appartient pas à une personne manifestement mineure.
+          required: true
+        - label: Le contenu n'est ni satirique ni une citation faite pour le dénoncer.
+          required: true

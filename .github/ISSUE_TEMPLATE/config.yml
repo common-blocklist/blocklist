@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Demande de retrait confidentielle
+    url: mailto:ardoise.blocklist@proton.me
+    about: Pour demander un retrait sans passer par une demande publique.

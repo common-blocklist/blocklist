@@ -1,0 +1,34 @@
+name: Demande de retrait
+description: Demander le retrait d'un compte de la liste
+title: "Retrait : @"
+labels: ["retrait"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Voir la [procédure de retrait](https://github.com/common-blocklist/blocklist/blob/main/RETRAIT.md). Pour une demande confidentielle, écrivez plutôt à `ardoise.blocklist@proton.me`.
+  - type: input
+    id: compte
+    attributes:
+      label: Identifiant du compte
+      placeholder: "exemple (sans @)"
+    validations:
+      required: true
+  - type: dropdown
+    id: motif
+    attributes:
+      label: Motif
+      options:
+        - Mauvais compte ou usurpation
+        - La publication ne correspond à aucun critère
+        - Publication supprimée et aucun nouveau contenu depuis 12 mois
+        - Changement de titulaire du compte
+        - Décision de justice ou demande RGPD
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Précisions
+      description: Facultatif.

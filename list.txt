@@ -1,0 +1,6 @@
+# name: Comptes signalés pour propos haineux
+# updated: 2026-10-28
+# count: 0
+# criteria: https://github.com/common-blocklist/blocklist/blob/main/CRITERES.md
+# removal: https://github.com/common-blocklist/blocklist/blob/main/RETRAIT.md
+# Un identifiant X par ligne, sans @. Les lignes commençant par # sont ignorées.
